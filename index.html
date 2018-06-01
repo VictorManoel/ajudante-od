@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajudande | Old Dragon RPG</title>
+    <meta name="theme-color" content="#E74C3C">
+    <meta name="description" content="Ajudante para criação da ficha do Old Dragon RPG!">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    
+    <link rel="manifest" href="assets/js/manifest.json"/>
+    <link rel="icon" type="image/png" href="assets/img/icon-32.png" sizes="32x32"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700"/>
+    <link rel="stylesheet" href="assets/css/header.css"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body>
+    <header id="navbar">
+        <div class="nav-wrap">
+            <a href="./" class="brand-logo">
+                <img src="assets/img/logos.png" alt="Old Dragon logo"/>
+            </a>
+            <nav class="nav-right">
+                <select name="raca" class="nav-input" title="Raça do personagem">
+                    <option value selected disabled>Raça</option>
+                    <option value="humano">Humano</option>
+                    <option value="anao">Anão</option>
+                    <option value="elfo">Elfo</option>
+                    <option value="halfling">Halfling</option>
+                </select>
+                
+                <select name="classe" class="nav-input" title="Classe do personagem">
+                    <option value selected disabled>Classe</option>
+                    <option value="clerigo">Clerigo</option>
+                    <option value="armas">H. de Armas</option>
+                    <option value="ladrao">Ladrão</option>
+                    <option value="mago">Mago</option>
+                </select>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <div class="atb-wrap">
+            <!-- Atributos -->
+            <div class="list atb-list">
+                <h2>Atributos</h2>
+                <div class="atb-item">
+                    <input type="number" class="atb" placeholder="For" min="1" max="29"  title="Força"/>
+                    <div class="atb-aj">...</div>
+                </div>
+                <div class="atb-item">
+                    <input type="number" class="atb" placeholder="Des" min="1" max="29"  title="Destreza"/>
+                    <div class="atb-aj">...</div>
+                </div>
+                <div class="atb-item">
+                    <input type="number" class="atb" placeholder="Con" min="1" max="29" title="Constituição"/>
+                    <div class="atb-aj">...</div>
+                </div>
+                <div class="atb-item">
+                    <input type="number" class="atb" placeholder="Int" min="1" max="29" title="Inteligência"/>
+                    <div class="atb-aj">...</div>
+                </div>
+                <div class="atb-item">
+                    <input type="number" class="atb" placeholder="Sab" min="1" max="29" title="Sabedoria"/>
+                    <div class="atb-aj">...</div>
+                </div>
+                <div class="atb-item">
+                    <input type="number" class="atb" title="Carisma" placeholder="Car" min="1" max="29"/>
+                    <div class="atb-aj">...</div>
+                </div>
+            </div>
+            <!-- Subatributos -->
+            <div class="list satb-list">
+                <h2>Subatributos</h2>
+                <h3>PV | Pontos de Vida</h3>
+                <div class="satb-wrap">
+                    <div class="satb satb-pv">...</div>
+                    <div class="satb satb-pv">...</div>
+                    <div class="satb satb-pv">...</div>
+                </div>
+                <h3>JP | Jogada de Proteção</h3>
+                <div class="satb-wrap">
+                    <div class="satb satb-jp">...</div>
+                    <div class="satb satb-jp atb-des">...</div>
+                    <div class="satb satb-jp">...</div>
+                    <div class="satb satb-jp">...</div>
+                </div>
+                <h3>Movimento</h3>
+                <div class="satb satb-mov">...</div>
+            </div>
+        </div>
+        <div class="atq-wrap">
+            <h2>Ataques</h2>
+            <div class="atq-list atq-cac">
+                <h3>Corpo a Corpo</h3>
+                <div class="atq-list-wrap">
+                    <div class="atq atq-t">...</div>
+                    <div class="atq atq-ba">...</div>
+                    <div class="atq atb-for">...</div>
+                </div>
+            </div>
+            <div class="atq-list atq-d">
+                <h3>Distância</h3>
+                <div class="atq-list-wrap">
+                    <div class="atq atq-t">...</div>
+                    <div class="atq atq-ba">...</div>
+                    <div class="atq atb-des">...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script defer src="assets/js/list.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+            
+            navigator.serviceWorker.oncontrollerchange = function () {
+                console.log('Recarregue a página!');
+            }
+        }
+    </script>

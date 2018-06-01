@@ -1,0 +1,70 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #EFEFEF;
+    -webkit-tap-highlight-color: #0000;
+    font-family: Lato, sans-serif;
+    line-height: 20px;
+}
+
+button, textarea, input, select, option {
+    outline: none;
+}
+
+:root {
+    --base: #E74C3C;
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    user-select: none;
+    background-color: var(--base);
+}
+
+#navbar * {
+    box-sizing: border-box;
+}
+
+#navbar .nav-wrap {
+	width: 100%;
+    height: 60px;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 10px 12px;
+}
+
+.brand-logo > img {
+    height: 40px;
+}
+
+.nav-right {
+    height: 40px;
+    width: auto;
+    float: right;
+}
+
+@media only screen and (max-width: 750px) {
+    .brand-logo > img {
+        height: 20px;
+        margin: 10px 0;
+    }
+}
+
+.nav-input {
+    height: 30px;
+    min-width: 80px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 2px;
+    margin: 5px 0;
+    background: #C0392B;
+    color: #FFF;
+    font-family: Lato, sans-serif;
+    cursor: pointer;
+}
